@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ ${UID} -ne 0 ]
+then
+echo
+echo "You need root access"
+echo
+exit 1 
+fi
+## check number of processors##
+
+if [ `nproc1 -eq 1 ]
+	 then 
+		 echo "this server has a very small space"
+		 exit 2
+fi
+
